@@ -10,7 +10,12 @@
     "electron-log": "^3.0.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "update-electron-app": "^1.2.0"
+    "update-electron-app": "^1.2.0",
+    "axios": "^0.19.0",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "next": "^4.0.3",
+    "next-routes": "^1.1.0"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
@@ -35,6 +40,7 @@
     "electron-build": "electron-builder",
     "release": "yarn react-build && electron-builder --publish=always",
     "build": "yarn react-build && yarn electron-build",
+    "dev": "node server.js",
     "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "browserslist": {
